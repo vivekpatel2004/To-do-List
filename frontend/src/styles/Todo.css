@@ -1,0 +1,181 @@
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* HEADER */
+.dash-header h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.dash-header p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.stat-card span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* SEARCH */
+.search {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 14px;
+}
+
+/* ADD TASK */
+.add-task {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.task-input {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.add-btn {
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.filters button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #e5e7eb;
+  cursor: pointer;
+}
+
+.filters .active {
+  background: #6366f1;
+  color: white;
+}
+
+/* TASK LIST */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-item {
+  background: #f8fafc;
+  padding: 14px 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.task-left input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.task-title {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.task-item.done .task-title {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+/* ACTION BUTTONS */
+.task-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.task-actions button {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-btn {
+  background: #e0e7ff;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* EDIT INPUT */
+.edit-input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #c7d2fe;
+}
+
+/* EMPTY */
+.empty {
+  text-align: center;
+  color: #64748b;
+  margin-top: 20px;
+}
