@@ -3,9 +3,12 @@ from flask_cors import CORS
 from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
 from mysql.connector import IntegrityError
-
-from db import get_db
 from auth import token_required, SECRET
+from db import get_db
+db = get_db()
+cursor = db.cursor(dictionary=True)
+from auth import token_required, SECRET
+
 
 app = Flask(__name__)
 CORS(app)

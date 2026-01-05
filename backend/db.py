@@ -1,15 +1,15 @@
-
 from dotenv import load_dotenv
-
 import mysql.connector
 import os
 
-db = mysql.connector.connect(
-    host=os.getenv("MYSQLHOST"),
-    user=os.getenv("MYSQLUSER"),
-    password=os.getenv("MYSQLPASSWORD"),
-    database=os.getenv("MYSQLDATABASE"),
-    port=int(os.getenv("MYSQLPORT"))
-)
+# Load .env file
+load_dotenv()
 
-cursor = db.cursor(dictionary=True)
+def get_db():
+    return mysql.connector.connect(
+        host=os.getenv("MYSQLHOST"),
+        user=os.getenv("MYSQLUSER"),
+        password=os.getenv("MYSQL_ROOT_PASSWORD"),
+        database=os.getenv("MYSQL_DATABASE"),
+        port=int(os.getenv("MYSQLPORT"))
+    )
